@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Article preview component](https://miksdev04.github.io/article-preview-component-master/)
 
 
 ## My process
