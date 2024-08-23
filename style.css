@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   font-family: Manrope;
+}
+
+*, *::before, *::after{
+   box-sizing: border-box;
+}
+
+:root{
+--Very-Dark-Grayis-Blue: #48556a;
+--Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+--Grayish-Blue: hsl(212, 23%, 69%);
+--Light-Grayish-Blue: #ecf2f8;
+   --fs: 13px;
+   --fw1: 700;
+   --fw2: 500;
+   /* Add more */
+}
+
+body{
+   background-color: var(--Light-Grayish-Blue);
+   min-height: 100dvh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.wrapper{
+    width: clamp(320px, 90%, 720px);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    box-shadow: 0px 20px 20px rgb(230, 230, 230);
+}
+.img-wrapper{
+    background-image: url('./images/drawers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    flex: 1 1 200px;
+    min-height: 175px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.content-wrapper{
+    background-color: rgb(255, 255, 255);
+    flex: 2 1 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    gap: 1rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.content-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.content-section h3{
+    font-weight: var(--fw1);
+    color: var(--Very-Dark-Grayis-Blue);
+}
+.content-section p{
+    color: var(--Very-Dark-Grayis-Blue);
+    font-size: var(--fs);
+}
+.share-section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.share-section img {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+.prof-content .name{
+    font-weight: var(--fw1);
+    color: var(--Very-Dark-Grayis-Blue);
+}
+.prof-content .date{
+    font-weight: var(--fw2);
+    color: var(--Grayish-Blue);
+}
+.show-share{
+    background-color: var(--Light-Grayish-Blue);
+    width: 1.8rem;
+    display: grid;
+    place-content: center;
+    aspect-ratio: 1;
+    margin-left: auto;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+}
+.share-icons{
+    bottom: 5.5rem;
+    right: -3.4rem;
+    position: absolute;
+    padding: 1rem 2rem;
+    background-color: var(--Very-Dark-Grayis-Blue);
+    /* display: flex; */
+    display: none;
+    border-radius: 10px;
+    gap: 1rem;
+    box-shadow: 0px 10px 10px rgb(230, 230, 230);
+}
+.share-icons svg{
+   transform: scale(.8);
+}
+.share-icons::after{
+    position: absolute;
+    content: '';
+    width: 1rem;
+    aspect-ratio: 1;
+    bottom: -.5rem;
+    background-color: var(--Very-Dark-Grayis-Blue);
+    left: 50%;
+    transform: translateX(-50%) rotateZ(45deg);
+    box-shadow: 5px 5px 5px rgb(230, 230, 230);
+}
+.share-icons span{
+    color: var(--Light-Grayish-Blue);
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+.btn-color{
+    background-color: var(--Very-Dark-Grayis-Blue);
+}
+.btn-icon-color{
+    fill: var(--Light-Grayish-Blue);
+}
+.toggle{
+    display: flex;
+}
+
+@media (max-width: 500px) {
+    .img-wrapper{
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .content-wrapper{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 2.5rem 2.7rem 0;
+    }
+    .content-wrapper h3{
+        font-size: 1rem;
+    }
+    .share-section{
+        padding: 1rem 0;
+    }
+    .share-icons{
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        align-items: center;
+        padding: 1.50rem 3rem;
+    }
+    .share-icons > svg{
+        transform: scale(1);
+    }
+    
+    .share-section button{
+        z-index: 11;
+    }
+    .share-icons::after{
+        display: none;
+    }
+    .btn-color{
+        background-color: var(--Desaturated-Dark-Blue);
+    }
+    
+}
