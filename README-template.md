@@ -10,9 +10,7 @@
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 
 ## Overview
@@ -47,7 +45,7 @@ Users should be able to:
 
 ### What I learned
 
-I leanrned design patterns and media queries to adjust the layout of the design base on the size of the screen.
+I learned design patterns and media queries to adjust the layout of the design base on the size of the screen.
 
 ### Continued development
 
